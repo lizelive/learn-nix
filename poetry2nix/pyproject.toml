@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "iapaidki"
+version = "0.1.0"
+description = "learning poetry"
+authors = ["LizeLive <git@lize.live>"]
+packages = [{include = "iapaidki"}]
+
+[tool.poetry.scripts]
+iapaidki = 'iapaidki:main'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^1.12.1"
+torchvision = "^0.13.1"
+torchaudio = "^0.12.1"
+# torch = {version = "^1.12.1", source = "pytorch"}
+# torchvision = {version = "^0.13.1", source = "pytorch"}
+# torchaudio = {version = "^0.12.1", source = "pytorch"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# [[tool.poetry.source]]
+# name = "pytorch"
+# url = "https://download.pytorch.org/whl/cu116/"
+# default = false
+# secondary = true
+
+# -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/a63021a330d8d33d862a8e29924b42d73037dd37.tar.gz

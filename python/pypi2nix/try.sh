@@ -1,0 +1,1 @@
+nix-shell -p pypi2nix
