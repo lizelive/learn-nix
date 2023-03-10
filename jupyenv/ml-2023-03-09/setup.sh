@@ -1,4 +1,4 @@
-pip3 install numpy --pre torch --force-reinstall --extra-index-url https://download.pytorch.org/whl/nightly/cu118 transformers diffusers accelerate scipy safetensors
+pip3 install numpy --pre torch --force-reinstall --extra-index-url https://download.pytorch.org/whl/nightly/cu117 transformers diffusers accelerate scipy safetensors
 
 
 
