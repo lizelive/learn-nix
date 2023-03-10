@@ -1,1 +1,0 @@
-pypi2nix is dead as of oct 2022

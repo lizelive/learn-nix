@@ -1,3 +1,6 @@
+does not work
+
+```
 [nix-shell:~/Documents/learn-nix/python/venv]$ python
 Python 3.10.9 (main, Dec  6 2022, 18:44:57) [GCC 11.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -13,3 +16,4 @@ Traceback (most recent call last):
   File "/nix/store/hhk4wr7hwry854sq69chmrjqyi964p7y-python3-3.10.9/lib/python3.10/ctypes/__init__.py", line 374, in __init__
     self._handle = _dlopen(self._name, mode)
 OSError: libstdc++.so.6: cannot open shared object file: No such file or directory
+```
