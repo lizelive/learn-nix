@@ -17,7 +17,7 @@
       in
       {
         packages = {
-          myapp = mkPoetryApplication { projectDir = ./.; };
+          myapp = mkPoetryApplication { projectDir = ./.;     overrides = poetry2nix.overrides.withDefaults (self: super: { foo = null; }); };
           default = self.packages.${system}.myapp;
         };
 

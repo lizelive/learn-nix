@@ -1,5 +1,5 @@
 does not work
-
+need to install a bunch of stuff
 ```
 [nix-shell:~/Documents/learn-nix/python/venv]$ python
 Python 3.10.9 (main, Dec  6 2022, 18:44:57) [GCC 11.3.0] on linux
