@@ -1,0 +1,13 @@
+name: mlws
+channels:
+  - conda-forge
+dependencies:
+  - pytorch-gpu
+  - opencv
+  - accelerate
+  - diffusers
+  - transformers
+  - scipy
+  - safetensors
+  - gradio
+  - ipykernel

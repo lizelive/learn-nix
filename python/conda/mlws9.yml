@@ -1,0 +1,18 @@
+name: mlws9
+channels:
+  - nvidia # unclear, but prob legaly required
+  - pytorch-nightly # needed for gpu
+dependencies:
+  - python=3.10
+  - pytorch =2=*cuda*
+  - pytorch-cuda=11.8
+  # - opencv=4
+  - pip
+  - pip: # trying stuff is painful
+    - diffusers
+    - transformers
+    - scipy
+    - safetensors
+    - gradio
+    - accelerate
+    - controlnet-aux

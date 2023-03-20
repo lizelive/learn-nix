@@ -1,0 +1,20 @@
+name: mlws4
+channels:
+  # - conda-forge # everything else
+  - xformers # only way to get the stupid thing
+  - nvidia # unclear, but prob legaly required
+  - pytorch # needed for gpu
+dependencies:
+  - python=3.10
+  - pytorch
+  - pytorch-cuda=11.7
+  - cudatoolkit
+  - opencv=4
+  - conda-forge::accelerate # they are 0.17 now
+  - xformers
+  - diffusers
+  - transformers
+  - scipy
+  - conda-forge::triton
+  - conda-forge::safetensors
+  - conda-forge::gradio

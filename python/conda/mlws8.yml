@@ -1,0 +1,16 @@
+name: mlws8
+dependencies:
+  - python=3.10
+  - pip
+  - pip: # trying stuff is painful
+    - triton
+    - xformers
+    - diffusers
+    - transformers
+    - scipy
+    - safetensors
+    - gradio
+    - accelerate
+    - opencv-contrib-python
+    - controlnet-aux
+    - onnxruntime-gpu

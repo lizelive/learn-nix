@@ -1,0 +1,19 @@
+name: mlws6
+channels:
+  - conda-forge # everything
+  - nodefaults
+dependencies:
+  - python=3.10
+  - pytorch-gpu
+  - opencv=4
+  - accelerate # 0.16, want 0.17 now
+  # - xformers # was not built with gpu?
+  - diffusers
+  - transformers
+  - scipy
+  - safetensors
+  - gradio
+  - pip
+  - pip: # trying stuff is painful
+    - triton
+    - xformers

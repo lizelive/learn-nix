@@ -1,0 +1,11 @@
+name: mlws5
+- torch
+- transformers
+- diffusers
+- accelerate
+- scipy
+- safetensors
+- xformers
+- opencv
+- controlnet
+- setuptools
