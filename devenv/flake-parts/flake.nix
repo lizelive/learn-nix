@@ -23,10 +23,19 @@
 
         # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
         packages.default = pkgs.hello;
-
         devenv.shells.default = {
           name = "my-project";
+          devcontainer.enable = true;
 
+          languages.rust = {
+            enable = true;
+            # https://devenv.sh/reference/options/#languagesrustversion
+            version = "latest";
+          };
+          pre-commit.hooks = {
+            clippy.enable = true;
+            rustfmt.enable = true;
+          };
           # https://devenv.sh/reference/options/
           packages = [ config.packages.default ];
 
