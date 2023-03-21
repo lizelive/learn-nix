@@ -9,11 +9,12 @@
   outputs = inputs @ {
     parts,
     nci,
+    treefmt-nix,
     ...
   }:
     parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
-      imports = [nci.flakeModule inputs.treefmt-nix.flakeModule];
+      imports = [nci.flakeModule treefmt-nix.flakeModule];
       perSystem = {config, ...}: let
         # TODO: change this to your crate's name
         crateName = "hello-world";
