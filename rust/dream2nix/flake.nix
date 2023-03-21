@@ -20,12 +20,11 @@
     # // flake-utils.lib.eachDefaultSystem (system: {
     #   formatter = nixpkgs.legacyPackages.${system}.alejandra;
     # })
-    // {
-      # formatter = inp.flake-utils.lib.eachDefaultSystem (system: { formatter = inp.dream2nix.inputs.nixpkgs.legacyPackages.${system}.alejandra});
-      formatter = {
-        x86_64-linux = inp.dream2nix.inputs.nixpkgs.legacyPackages.x86_64-linux.alejandra;
-        aarch64-linux = inp.dream2nix.inputs.nixpkgs.legacyPackages.aarch64-linux.alejandra;
-      };
-    }
+    # // {
+    #   # formatter = inp.flake-utils.lib.eachDefaultSystem (system: { formatter = inp.dream2nix.inputs.nixpkgs.legacyPackages.${system}.alejandra});
+    #   formatter = {
+    #     x86_64-linux = inp.dream2nix.inputs.nixpkgs.legacyPackages.x86_64-linux.alejandra;
+    #   };
+    # }
   );
 }
