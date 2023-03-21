@@ -22,9 +22,6 @@
           projectRootFile = "flake.nix";
           programs.nixpkgs-fmt.enable = true;
         };
-        perSystem.dream2nix.outputs;
-
-
       };
     };
 
