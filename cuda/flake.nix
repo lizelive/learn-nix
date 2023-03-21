@@ -4,26 +4,28 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let 
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
         pkgs = import nixpkgs {
           inherit system;
           config = {
             allowUnfree = true;
             cudaSupport = true;
-            cudaCapabilities = [ "8.6" ];
+            cudaCapabilities = ["8.6"];
             cudaVersion = "12.0";
           };
-          overlays = [ self.overlay ];
         };
-      in
-      {
-        overlay = final: prev: {
-          hello = pkgs.writeText "hello" "Hello, world!";
-        };
-        # cudaPackages.cuda-samples
-        defaultPackage = pkgs.hello;
+        hello = pkgs.writeShellScriptBin "hello" "echo Hello, world!";
+      in {
+        shellScripts = {inherit hello;};
+        # cudaCapabilities = pkgs.cudaPackages;
+        # defaultPackage = pkgs.cudaPackages.cuda-samples;
+        defaultPackage = hello;
       }
     );
 }
