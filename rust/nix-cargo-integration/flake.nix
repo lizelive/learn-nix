@@ -4,7 +4,7 @@
   inputs.nci.inputs.nixpkgs.follows = "nixpkgs";
   inputs.parts.url = "github:hercules-ci/flake-parts";
   inputs.parts.inputs.nixpkgs-lib.follows = "nixpkgs";
-  treefmt-nix.url = "github:numtide/treefmt-nix";
+  inputs.treefmt-nix.url = "github:numtide/treefmt-nix";
 
   outputs = inputs @ {
     parts,
