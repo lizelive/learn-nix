@@ -25,16 +25,16 @@
         packages.default = pkgs.hello;
         devenv.shells.default = {
           name = "my-project";
-          devcontainer.enable = true;
+          devcontainer.enable = false;
 
           languages.rust = {
             enable = true;
             # https://devenv.sh/reference/options/#languagesrustversion
           };
-          pre-commit.hooks = {
-            clippy.enable = true;
-            rustfmt.enable = true;
-          };
+          # pre-commit.hooks = {
+          #   clippy.enable = true;
+          #   rustfmt.enable = true;
+          # };
           # https://devenv.sh/reference/options/
           packages = [ config.packages.default ];
 
