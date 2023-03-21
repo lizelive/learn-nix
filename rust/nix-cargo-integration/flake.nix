@@ -4,6 +4,7 @@
   inputs.nci.inputs.nixpkgs.follows = "nixpkgs";
   inputs.parts.url = "github:hercules-ci/flake-parts";
   inputs.parts.inputs.nixpkgs-lib.follows = "nixpkgs";
+  treefmt-nix.url = "github:numtide/treefmt-nix";
 
   outputs = inputs @ {
     parts,
@@ -12,7 +13,7 @@
   }:
     parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
-      imports = [nci.flakeModule];
+      imports = [nci.flakeModule inputs.treefmt-nix.flakeModule];
       perSystem = {config, ...}: let
         # TODO: change this to your crate's name
         crateName = "hello-world";
