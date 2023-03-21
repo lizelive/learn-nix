@@ -20,9 +20,10 @@
           };
         };
         my-python = pkgs.python310;
-        my-python-with-packages = my-python.withPackages (p: with p; [
-          pytorch-bin
-        ]);
-      in { defaultPackage = my-python-with-packages; }
+        my-python-with-packages = my-python.withPackages (p:
+          with p; [
+            pytorch-bin
+          ]);
+      in {defaultPackage = my-python-with-packages;}
     );
 }

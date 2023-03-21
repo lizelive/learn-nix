@@ -1,27 +1,27 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pythonOlder
-, cookiecutter
-, filelock
-, huggingface-hub
-, importlib-metadata
-, regex
-, requests
-, numpy
-, packaging
-, tensorflow
-, sagemaker
-, ftfy
-, protobuf
-, scikit-learn
-, pillow
-, pyyaml
-, torch
-, tokenizers
-, tqdm
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pythonOlder,
+  cookiecutter,
+  filelock,
+  huggingface-hub,
+  importlib-metadata,
+  regex,
+  requests,
+  numpy,
+  packaging,
+  tensorflow,
+  sagemaker,
+  ftfy,
+  protobuf,
+  scikit-learn,
+  pillow,
+  pyyaml,
+  torch,
+  tokenizers,
+  tqdm,
 }:
-
 buildPythonPackage rec {
   pname = "transformers";
   version = "4.25.1";
@@ -36,20 +36,22 @@ buildPythonPackage rec {
     hash = "sha256-b0xEHM72HcaTRgGisB6fnPrMaXZ8EcJfowwK92W4aYg=";
   };
 
-  propagatedBuildInputs = [
-    filelock
-    huggingface-hub
-    numpy
-    protobuf
-    packaging
-    pyyaml
-    regex
-    requests
-    tokenizers
-    tqdm
-  ] ++ lib.optionals (pythonOlder "3.8") [
-    importlib-metadata
-  ];
+  propagatedBuildInputs =
+    [
+      filelock
+      huggingface-hub
+      numpy
+      protobuf
+      packaging
+      pyyaml
+      regex
+      requests
+      tokenizers
+      tqdm
+    ]
+    ++ lib.optionals (pythonOlder "3.8") [
+      importlib-metadata
+    ];
 
   passthru.optional-dependencies = {
     ja = [
@@ -78,7 +80,7 @@ buildPythonPackage rec {
     sagemaker = [
       sagemaker
     ];
-    ftfy = [ ftfy ];
+    ftfy = [ftfy];
     onnx = [
       # onnxconverter-common
       # tf2onnx
@@ -87,7 +89,6 @@ buildPythonPackage rec {
       pillow
     ];
   };
-
 
   # Many tests require internet access.
   doCheck = false;
@@ -102,6 +103,6 @@ buildPythonPackage rec {
     changelog = "https://github.com/huggingface/transformers/releases/tag/v${version}";
     license = licenses.asl20;
     platforms = platforms.unix;
-    maintainers = with maintainers; [ pashashocky ];
+    maintainers = with maintainers; [pashashocky];
   };
 }
