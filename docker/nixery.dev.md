@@ -1,0 +1,1 @@
+automaticly build nix images with specified stuff

@@ -1,0 +1,1 @@
+https://std.divnix.com/templates/rust.html
