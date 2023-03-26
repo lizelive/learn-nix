@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "learn-devenv"
+version = "0.1.0"
+description = ""
+authors = ["lize.live <git@lize.live>"]
+readme = "README.md"
+packages = [{include = "learn_devenv"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
