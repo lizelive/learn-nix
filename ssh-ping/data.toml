@@ -1,0 +1,11 @@
+[triton]
+src = "github:openai/triton/master"
+
+[textfiles]
+src = "ipfs:QmNoscE3kNc83dM5rZNUC5UDXChiTdDcgf16RVtFCRWYuU"
+note = "some text files"
+
+[ramdisk]
+src = "ramdisk:10GiB"
+note = "10GiB of RAM"
+

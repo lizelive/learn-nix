@@ -37,3 +37,11 @@ https://github.com/huggingface/optimum-intel/tree/main/examples/neural_compresso
  https://sparsefusion.github.io/
  https://huggingface.co/blog/controlnet
  https://huggingface.co/docs/diffusers/stable_diffusion
+
+
+ #  nixos tutorials
+ https://nixos.org/guides/nix-pills/
+ https://nix.dev/influences
+
+ # mixos manual
+ https://ryantm.github.io/nixpkgs/builders/fetchers/
