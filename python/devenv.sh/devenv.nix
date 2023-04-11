@@ -20,6 +20,7 @@
   languages.python = {
     enable = true;
     poetry.enable = true;
+    package = pkgs.python311;
   };
   
   # https://devenv.sh/pre-commit-hooks/
